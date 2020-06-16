@@ -1,3 +1,8 @@
+var champname=['탈론, 아리', '오리아나, 쉔, 리산드라, 아우렐리온 솔, 애니','이즈리얼, 모르가나, 바루스, 자크, 샤코, 케인','그라가스, 이블린, 워윅, 카직스, 나미','조이, 판테온, 갈리오, 카타리나','키아나',
+'쓰레쉬, 미스 포츈, 바드, 리 신, 렉사이, 노틸러스, 유미','트위치, 카서스, 킨드레드, 누누와 윌럼프, 탈리야, 잔나, 스웨인','오른, 블라디미르, 가렌','갱플랭크, 우르곳, 퀸','카이사, 케이틀린','자야, 브랜드,베이가, 자이라, 벨코즈'
+,'신드라, 아칼리, 루시안, 피즈, 사일러스','트린다미어, 럼블, 하이머딩거, 다이애나, 렝가','세트, 아펠리오스, 올라프','드레이븐, 탐 켄치, 우디르'];
+
+
 jQuery('.mm-prev-btn').hide();
 
 	var x;
@@ -245,10 +250,9 @@ jQuery('.mm-prev-btn').hide();
 	function collectData() {
 		
 		var map = {};
-		var ax = ['0','red','mercedes','3.14','3'];
 		var answer = '';
 		var total = 0;
-
+        var tmpp=0;
 		jQuery('.mm-survey-item input:checked').each(function(index, val) {
 			var item;
 			var data;
@@ -259,9 +263,11 @@ jQuery('.mm-prev-btn').hide();
 			data = item.val();
 			name = item.data('item');
 			n = parseInt(data);
-			total += n;
 
-			map[name] = data[0];
+            map[name] = data[0];
+            tmpp=data[1];
+            tmpp*=1;
+            total += tmpp;
 
 		});
 
@@ -274,7 +280,7 @@ jQuery('.mm-prev-btn').hide();
         }
 
 		jQuery('.mm-survey-results-score').html( '당신의 MBTI는 '+ answer + '입니다.');
-		jQuery('.mm-survey-results-champ').html( '말파이트 를 추천합니다.');
+		jQuery('.mm-survey-results-champ').html( champname[total]+ '&nbsp'+'을(를) 추천합니다.');
 
 	}
 
