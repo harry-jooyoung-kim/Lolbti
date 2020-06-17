@@ -279,7 +279,7 @@ jQuery('.mm-prev-btn').hide();
             
         }
 
-		jQuery('.mm-survey-results-score').html( '당신의 MBTI는 '+ answer + '입니다.');
+		jQuery('.mm-survey-results-score').html( answer + '형 입니다.');
 		jQuery('.mm-survey-results-champ').html( champname[total]+ '&nbsp'+'을(를) 추천합니다.');
 
 	}
