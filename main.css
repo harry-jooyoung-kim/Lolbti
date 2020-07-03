@@ -53,6 +53,11 @@ background-color: white;
     position: relative;
     float: left;
 }
+.mm-refresh-btn {
+	display: inline-block;
+    position: relative;
+    float: right;
+}
 
 .mm-home-btn {
 	display: inline-block;
